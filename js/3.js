@@ -8,6 +8,19 @@ function solve() {
         document.getElementById('result').textContent = 'Пожалуйста, введите числа.';
         return;
     }
+if (a === 0) {
+    if (b === 0) {
+        if (c === 0) {
+            document.getElementById('result').textContent = 'У уравнения бесконечно много решений.';
+        } else {
+            document.getElementById('result').textContent = 'У уравнения нет решений.';
+        }
+    } else {
+        let x = -c / b;
+        document.getElementById('result').textContent = 'У уравнения одно решение';
+    }
+    return;
+}
 
 
     let discriminant = b * b - 4 * a * c;
